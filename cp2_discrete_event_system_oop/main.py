@@ -17,7 +17,7 @@ def run_simulation():
     process2.add_next_element(process3, 1)
 
     model = Model(create)
-    all_statistics = model.run_simulation(1000, True)
+    all_statistics = model.run_simulation(1000, False)
 
     for name, statistics in all_statistics.items():
         print(name, statistics, sep='\n')

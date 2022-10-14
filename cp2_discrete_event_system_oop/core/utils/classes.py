@@ -1,3 +1,7 @@
+from dataclasses import dataclass
+
+
+@dataclass(order=True)
 class Channel:
-    def __init__(self, next_time):
-        self.next_time = next_time
+    next_time: float
+

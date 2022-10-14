@@ -21,11 +21,11 @@ class Process(Element):
 
     def __str__(self):
         queue_load = self.queue_current_size / self.queue_max_size
-        return 'Block ' + str(self.name) + ':\n' + \
-                'Queue Load: ' + queue_load + '\n' + \
-                'Next Time: ' + str(self.next_time) + '\n' + \
-                'Events Amount: ' + str(self.statistics.events_amount) + '\n' + \
-                'Active Channels Amount: ' + str(len(self.channels))
+        return 'Block '  + ':\n' + \
+               'Queue Load: ' + queue_load + '\n' + \
+               'Next Time: ' + str(self.next_time) + '\n' + \
+               'Events Amount: ' + str(self.statistics.events_amount) + '\n' + \
+               'Active Channels Amount: ' + str(len(self.channels))
 
     def action_out(self):
         channel = heappop(self.channels)
@@ -64,4 +64,3 @@ class Process(Element):
         channel = Channel(self.get_next_time())
         heappush(self.channels, channel)
         self.next_time = self.channels[0].next_time
-
