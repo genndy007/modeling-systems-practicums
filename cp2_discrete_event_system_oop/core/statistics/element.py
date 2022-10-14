@@ -1,4 +1,4 @@
-class Statistics:
+class ElementStatistics:
     def __init__(self):
         self.events_amount = 0
 

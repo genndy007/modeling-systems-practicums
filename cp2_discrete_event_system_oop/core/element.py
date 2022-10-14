@@ -1,10 +1,10 @@
 import random
 
-from core.statistics import Statistics
+from core.statistics.element import ElementStatistics
 
 
 class Element:
-    def __init__(self, name, delay_function, statistics=Statistics()):
+    def __init__(self, name, delay_function, statistics=ElementStatistics()):
         self.name = name
         self.delay_function = delay_function
         self.statistics = statistics
