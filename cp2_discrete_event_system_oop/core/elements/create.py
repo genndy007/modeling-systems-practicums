@@ -1,4 +1,4 @@
-from core.element import Element
+from core.elements.base import Element
 
 
 class Create(Element):

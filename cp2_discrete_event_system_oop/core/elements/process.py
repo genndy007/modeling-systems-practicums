@@ -1,11 +1,6 @@
-from core.element import Element
+from core.elements.base import Element
 from core.statistics.process import ProcessStatistics
 from core.utils.functions import set_class_instance_id
-
-
-class Channel:
-    def __init__(self, next_time):
-        self.next_time = next_time
 
 
 @set_class_instance_id
