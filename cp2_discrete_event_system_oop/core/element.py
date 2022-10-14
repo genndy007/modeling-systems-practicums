@@ -30,6 +30,10 @@ class Element:
     def set_current_time(self, next_time):
         self.current_time = next_time
 
+    def get_next_time(self):
+        next_time = self.current_time + self.delay_function()
+        return next_time
+
     def __check_probabilities(self):
         probabilities_sum = sum(self.next_probabilities)
         if probabilities_sum != 1:
@@ -42,10 +46,3 @@ class Element:
             next_element = random.choices(self.next_elements, self.next_probabilities)[0]
             return next_element
         return None
-
-    def __get_next_time(self):
-        next_time = self.current_time + self.delay_function()
-        return next_time
-
-
-
