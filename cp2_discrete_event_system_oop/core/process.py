@@ -1,6 +1,6 @@
 from core.element import Element
 from core.statistics.process import ProcessStatistics
-from core.utils import set_class_instance_id
+from core.utils.functions import set_class_instance_id
 
 
 class Channel:
