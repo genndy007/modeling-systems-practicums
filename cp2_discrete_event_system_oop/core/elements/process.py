@@ -20,9 +20,9 @@ class Process(Element):
         heapify(self.channels)
 
     def __str__(self):
-        queue_load = self.queue_current_size / self.queue_max_size
-        return 'Block '  + ':\n' + \
-               'Queue Load: ' + queue_load + '\n' + \
+        queue_load = (self.queue_current_size / self.queue_max_size) * 100
+        return 'Block:' + self.name + '\n' + \
+               'Queue Load: ' + str(queue_load) + '%\n' + \
                'Next Time: ' + str(self.next_time) + '\n' + \
                'Events Amount: ' + str(self.statistics.events_amount) + '\n' + \
                'Active Channels Amount: ' + str(len(self.channels))
