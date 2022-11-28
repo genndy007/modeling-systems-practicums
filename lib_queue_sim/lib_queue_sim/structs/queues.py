@@ -70,5 +70,3 @@ class LimitedPriorityQueue(LimitedCollection, PriorityQueue):
 
     def get_capacity_percent(self):
         return len(self) / self.limit_size
-
-
