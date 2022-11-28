@@ -31,7 +31,7 @@ class Create(Element):
         super().__init__(stats_cls=stats_cls, **kwargs)
 
     def action_in(self, item):
-        raise RuntimeError('Action IN impossible, it is CREATE')
+        raise RuntimeError("Action IN impossible, it is CREATE")
 
     def action_out(self):
         self.next_time = self.get_next_time()
