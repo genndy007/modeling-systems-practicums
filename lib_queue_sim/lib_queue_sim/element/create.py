@@ -26,7 +26,7 @@ class CreateStats(ElementStats):
         }
 
 
-class Create(Element):
+class CreateElement(Element):
     def __init__(self, stats_cls=CreateStats, **kwargs):
         super().__init__(stats_cls=stats_cls, **kwargs)
 
@@ -44,7 +44,7 @@ class Create(Element):
         pass
 
 
-class DefaultCreate(Create):
+class DefaultCreateElement(CreateElement):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         self.next_id = 0
