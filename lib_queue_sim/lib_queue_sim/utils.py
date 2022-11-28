@@ -7,7 +7,7 @@ TIME_INFINITE = float("inf")
 TIME_EPSILON = sys.float_info.epsilon
 
 
-def zero_fn():
+def zero_fn(**kwargs):
     return 0
 
 
