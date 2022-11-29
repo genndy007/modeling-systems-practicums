@@ -1,7 +1,6 @@
 import logging
 import sys
 from abc import ABC
-from operator import attrgetter
 
 from lib_queue_sim.element.format import DefaultElementFormatter
 
