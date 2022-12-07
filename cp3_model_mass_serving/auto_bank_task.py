@@ -74,12 +74,12 @@ def run_bank_simulation():
 
     workers = [first_cassa, second_cassa]
     totals = {
-        'fail_probability': calculate_total_failure_probability(workers),
-        'transitions_num': calculate_total_transitions(workers),
-        'mean_clients_amt': calculate_mean_clients_amt(workers),
+        "fail_probability": calculate_total_failure_probability(workers),
+        "transitions_num": calculate_total_transitions(workers),
+        "mean_clients_amt": calculate_mean_clients_amt(workers),
     }
     logger.log_totals(totals)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     run_bank_simulation()
