@@ -9,7 +9,7 @@ def calculate_mean_clients_amt(workers):
     return total
 
 
-def calculate_total_failure_probability(workers: list[BankWorkerElement]):
+def calculate_total_failure_probability(workers):
     total_in, total_fails_amt = 0, 0
     for worker in workers:
         total_in += worker.stats.in_amount
