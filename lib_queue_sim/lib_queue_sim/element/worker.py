@@ -1,12 +1,15 @@
+from dataclasses import dataclass, field
+from typing import Any
+
 from lib_queue_sim.element.abstract import ElementStats, Element
 from lib_queue_sim.structs.queues import Queue, PriorityQueue, LimitedPriorityQueue
 from lib_queue_sim.utils import TIME_EPSILON, TIME_INFINITE
 
 
+@dataclass(order=True)
 class Channel:
-    def __init__(self, item, next_time):
-        self.item = item
-        self.next_time = next_time
+    item: Any = field(compare=False)
+    next_time: float
 
 
 class WorkerStats(ElementStats):
