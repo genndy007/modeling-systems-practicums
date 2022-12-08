@@ -12,9 +12,9 @@ class IllPatientType(Enum):
 
 @total_ordering
 class IllPatientItem(Item):
-    def __init__(self, item_id, created_at, id, type, redirected=False):
+    def __init__(self, item_id, created_at, type, redirected=False):
         super().__init__(item_id, created_at)
-        self.id = id
+        self.id = item_id
         self.type = type
         self.redirected = redirected
 
